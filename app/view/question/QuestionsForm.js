@@ -1,5 +1,5 @@
 Ext.define('SurveyApp.view.question.QuestionsForm',{
-    extend:'',
+    extend:'Ext.window.Window',
     controller:'questionsformcontroller',
 
     fields:[

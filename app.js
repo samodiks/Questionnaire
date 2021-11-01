@@ -14,5 +14,7 @@ Ext.application({
     ],
 
     // The name of the initial view to create.
-    mainView: 'SurveyApp.view.main.Main'
+    //mainView: 'SurveyApp.view.main.Main'
+
+   //mainView: 'SurveyApp.view.auth.Login'
 });

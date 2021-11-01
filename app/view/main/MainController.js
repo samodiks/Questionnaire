@@ -15,5 +15,13 @@ Ext.define('SurveyApp.view.main.MainController', {
         if (choice === 'yes') {
             //
         }
+    },
+    onLogout:function(){
+        let me = this;
+        localStorage.removeItem('isLoggedIn',false);
+        visualViewport.destroy();
+        Ext.create({
+            xtype:'login'
+        });
     }
 });

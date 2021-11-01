@@ -7,7 +7,7 @@
  */
 Ext.define('SurveyApp.view.main.Main', {
     extend: 'Ext.tab.Panel',
-    xtype: 'app-main',
+    xtype: 'mainviewport',
 
     requires: [
         'Ext.plugin.Viewport',
@@ -15,11 +15,12 @@ Ext.define('SurveyApp.view.main.Main', {
 
         'SurveyApp.view.main.MainController',
         'SurveyApp.view.main.MainModel',
-        'SurveyApp.view.main.List'
+        'SurveyApp.view.main.List',
+        'SurveyApp.view.main.MainViewModel',
     ],
-
+    plugins:'viewport',
     controller: 'main',
-    viewModel: 'main',
+    viewModel: 'mainviewmodelport',
 
     ui: 'navigation',
 

@@ -1,17 +1,17 @@
-/**
- * Demonstrates a simple login form.
- */
  Ext.define('SurveyApp.view.auth.Login', {
-    extend: 'Ext.form.Panel',
-    xtype: 'form-login',
+    extend: 'Ext.window.Window',
+    xtype: 'login',
     controller: 'logincontroller',
     title: 'Login',
 
     bodyPadding: 10,
-    width: 600,
-    autoSize: true,
+    //width: 600,
+   // autoSize: true,
     closable:true,
     autoShow:true,
+    requires:[
+        'Ext.form.Panel'
+    ],
   
     items:{
         xtype:'form',

@@ -23,5 +23,13 @@ Ext.define('SurveyApp.Application', {
                 }
             }
         );
+    },
+    launch:function(profile){
+        let isLoggedIn = localStorage.getItem('isLoggedIn');
+        if(!isLoggedIn){
+            Ext.widget('mainviewport');
+        }else{
+            Ext.widget('login');
+        }
     }
 });
