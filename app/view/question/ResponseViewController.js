@@ -1,4 +1,4 @@
-Ext.define('SurveyApp.view.question.QuestionViewController',{
+Ext.define('SurveyApp.view.question.ResponseViewController',{
     extend:'Ext.app.ViewController',
 
     alias:'controller.questionviewcontroller',
