@@ -84,9 +84,9 @@ Ext.define('SurveyApp.view.main.Main', {
     }, {
         title: 'Users',
         iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items: [{
+            xtype: 'questionView'
+        }]
     }, {
         title: 'Groups',
         iconCls: 'fa-users',
