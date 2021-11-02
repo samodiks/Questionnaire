@@ -19,6 +19,12 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
     },
     
     items:[{
+        xtype: 'panel',
+        reference: 'cardpanel',
+        layout:'card',
+        items:[{
+        id:'card-0',
+        iconCls:'fas fa-users',
         title:'Personal Information',
         items: [{   
             layout: 'accordion',
@@ -29,9 +35,8 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                 
                 items:[{
                     bind:{
-                        html: '<h1>{record.id}</h1>',
+                        html: '<h3>{record.id}</h3>',
                     },
-                    
                     
                 },{
                     xtype:'textfield',
@@ -40,22 +45,18 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                         value:'{record.id}'
                     },
 
-                },
-                {
-                    
+                },{
                     xtype:'htmleditor'
 
-                }
-                    
-                    
-                ],
+                }],
             },
                 
             {
                 title: 'Question 2',
                 items:[{
+                
                     bind:{
-                        html: '<h1>{record.id1}</h1>',
+                        html: '<h3>{record.id1}</h3>',
                     },
                     
                     
@@ -67,13 +68,16 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                     },
 
                 },{
-                    xtype:'dateformatfield', 
+                    layout:'form',
+                    xtype:'dateformatfield',
+                    maxValue: Ext.Date.add(new Date(),Ext.Date.YEAR,-18),
                     reference:'dob',
                     listeners:{
                         select:'onDatePicked'
                     }
 
                 },{
+                    layout:'form',
                     xtype:'textfield',
                     fieldLabel:'Age',
                     reference:'age',
@@ -91,7 +95,6 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                 header: {
                     style: {
                         backgroundColor: 'red',
-                        
                     }
                 },
                 
@@ -100,7 +103,7 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                     reference:'systechPeriod',
                     items:[{
                         bind:{
-                            html: '<h1>{record.id2}</h1>',
+                            html: '<h3>{record.id2}</h3>',
                         },
                         
                         
@@ -121,7 +124,7 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                         ],
                         listeners:{
                             change:"differentQs",
-                            change:'onAnswered'
+                            //change:'onAnswered'
                         }
                     }]
 
@@ -135,7 +138,7 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                 reference:'differentOpportunity',
                 items:[{
                     bind:{
-                        html: '<h1>{record.id3}</h1>',
+                        html: '<h3>{record.id3}</h3>',
                     },
                     
                     
@@ -148,7 +151,7 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
 
                 },
                 {
-                    xtype: 'textareafield',
+                    xtype: 'htmleditor',
         
                 }]
 
@@ -156,17 +159,41 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
             
     }],
     }]
+},{
+    id:'card-1',
+    iconCls:'fas fa-cross',
+    title:'Section Two: Disc Personality Test',
+    padding:10,
+    items:[
+
+    ]
+
+},{
+    id:'card-2',
+    iconCls:'fas fa-pen',
+    title:'Love Language and Communication Styllle Test',
+    padding:10,
+    items:[
+
+    ]
 }],
+
         bbar:[
+         
             {
+                id: 'move-prev',
+                text:'Back',
+                handler:'onBackButton',
+
+                disabled:true
+            },
+            '->',
+            {
+                id: 'move-next',
                 text:'Next',
                 handler:'onNextButton'
             },
-            {
-                text:'Back',
-                handler:'onBackButton'
-            }
         ]
-
+    }]
     
 });

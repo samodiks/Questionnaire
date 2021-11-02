@@ -43,5 +43,24 @@ Ext.define('SurveyApp.view.question.QuestionsFormController',{
             console.log("nooooo")
         }
     },
+    onBackButton:function(btn, e, eOpts){
+        let me = this,
+            window = me.getView(),
+            cardpanel = window.lookupReference('cardpanel');
+        this.navigate(cardpanel,"prev");
+    },
+    onNextButton: function(btn, e, eOpts){
+        let me = this,
+            window = me.getView(),
+            cardpanel = window.lookupReference('cardpanel');
+        this.navigate(cardpanel,"next");
+    },
+    navigate: function(panel, direction){
+        let layout = panel.getLayout();
+        layout[direction]();
+        Ext.getCmp('move-prev').setDisabled(!layout.getPrev());
+        Ext.getCmp('move-next').setDisabled(!layout.getNext());
+    }
+    
     
 })

@@ -13,13 +13,5 @@ Ext.define('SurveyApp.view.auth.LoginController', {
         
         Ext.widget('mainviewport');
 
-        /* if (form.validate()) {
-            Ext.Msg.alert('Login Success', 'You have been logged in!');
-        }
-        else {
-            Ext.Msg.alert('Login Failure', 'The username/password provided is invalid.');
-        } */
     }
-
-   // }
 });
