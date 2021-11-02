@@ -89,6 +89,13 @@ Ext.define('SurveyApp.view.main.Main', {
             xtype: 'questionView'
         }]
     }, {
+        title: 'Questionnaire',
+        iconCls: 'fa-user',
+        items: [{
+            xtype: 'questionnaire'
+        }]
+    },
+    {
         title: 'Groups',
         iconCls: 'fa-users',
         bind: {
