@@ -19,7 +19,7 @@ Ext.define('SurveyApp.view.main.MainController', {
     onLogout:function(){
         let me = this;
         localStorage.removeItem('isLoggedIn',false);
-        visualViewport.destroy();
+        me.getView().destroy();
         Ext.create({
             xtype:'login'
         });

@@ -2,17 +2,6 @@ Ext.define('SurveyApp.view.auth.LoginController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.logincontroller',
 
-    /* onLoginClick:function(btn, e, eOpts){
-        var me = this,
-            model = me.getViewModel(),
-            refs = me.getReferences(),
-            form = me.lookup('loginform').getForm();
-        // submit form form
-        localStorage.setItem('isLoggedIn', true);
-        me.getView().destroy();
-        
-        Ext.widget('mainviewport');
-    }, */
     statics: {
         helper: function (response, formdata, me) {
             if (response.status == 200) {
@@ -29,8 +18,10 @@ Ext.define('SurveyApp.view.auth.LoginController', {
                     return;
                 }
             }
-            Ext.Msg.alert('Something went horribly wrong. Reload the Page');
-            return;
+            else{
+                Ext.Msg.alert('Something went horribly wrong. Reload the Page');
+                return;
+        }
             
         }
     },

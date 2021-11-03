@@ -12,14 +12,19 @@ Ext.define('SurveyApp.view.main.Main', {
     requires: [
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
-
         'SurveyApp.view.main.MainController',
         'SurveyApp.view.main.MainModel',
         'SurveyApp.view.main.List',
+        'SurveyApp.view.auth.RegisterForm',
         'SurveyApp.view.main.MainViewModel',
+        'SurveyApp.view.auth.RegisterFormController',
+
     ],
     plugins:'viewport',
     controller: 'main',
+    // controller: 'registercontroller',
+
+
     viewModel: 'mainviewmodelport',
 
     ui: 'navigation',
@@ -48,6 +53,26 @@ Ext.define('SurveyApp.view.main.Main', {
             overflowHandler: 'none'
         }
     },
+    tbar:[
+        '->',
+        {       
+                text: 'Logout',
+                xtype:'button',
+                iconCls: 'fas fa-sign-out',
+                listeners:{
+                    click:'onLogout'
+                }
+               
+        }, {   
+            text: 'Change PassWord',
+            xtype:'button',
+            iconCls: 'fas fa-sign-out',
+            listeners:{
+                click:'changePassword'
+            }
+        
+    }
+    ],
 
     responsiveConfig: {
         tall: {
@@ -86,7 +111,7 @@ Ext.define('SurveyApp.view.main.Main', {
         title: 'Users',
         iconCls: 'fa-user',
         items: [{
-            xtype: 'questionView'
+            xtype: 'registerform'
         }]
     }, {
         title: 'Questionnaire',

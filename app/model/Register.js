@@ -1,0 +1,25 @@
+Ext.define('SurveyApp.model.Register',{
+    extend:'Ext.data.Model',
+
+    fields:[
+        {
+            name:'id',
+            type:'integer'
+        },{
+            name:'username',
+            type:'string'
+        },
+        {
+            name:'email',
+            type:'string'
+        },
+        {
+            name:'dor',
+            type:'string'
+        },
+        {
+            name:'password',
+            type:'string'
+        }
+    ]
+});
