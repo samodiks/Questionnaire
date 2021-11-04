@@ -165,7 +165,7 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
             title: 'Question 5',
             
             items:[{
-                //hidden:true,
+                hidden:true,
                 reference:'differentOpportunity',
                 items:[
                     {

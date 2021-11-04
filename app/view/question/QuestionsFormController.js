@@ -34,7 +34,9 @@ Ext.define('SurveyApp.view.question.QuestionsFormController',{
             var differentOpportunity=view.lookupReference('differentOpportunity');
             differentOpportunity.setVisible(true);
         }else{
-            console.log("nooooo")
+            var differentOpportunity=view.lookupReference('card-0');
+            differentOpportunity.setVisible(false);
+            
         }
     },
     sectionTwo:function(){
