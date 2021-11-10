@@ -3,7 +3,6 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
     layout:'card',
     width:900,
     xtype:'questionnaire',
-    store:'categories',
     controller:'questionsformcontroller',
     viewModel:{
         data:{
@@ -13,7 +12,13 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                 id2:'Can you sign a four year contract with Systech?',
                 id3:'if safaricom offered you a job, with a salary of 300,000 would you take it?Give a reason',
                 id4:'Which of these personalities describe you well?',
-                id5:'What is you love language?'
+                id5:'When did you start your programming journey?',
+                id6:'Which Version control are you best at?',
+                id7:'Where do you keep your projects',
+                id8:'Add your link to your account',
+                id9:'Which languages would you be comfortable to use for the hands on skills interview?',
+                id10:'Which frameworks have you used?',
+                id11:'Which Ides do you use? '
             }   
         }
     },
@@ -33,20 +38,26 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                 {
                 title: 'Question 1',
                 
-                items:[{
+                items:[
+                    {
                     bind:{
                         html: '<h3>{record.id}</h3>',
                     },
                     
-                },{
-                    xtype:'textfield',
-                    hidden:true,
-                    bind:{
-                        value:'{record.id}'
-                    },
+                },
+                // {
+                //     xtype:'textfield',
+                //     hidden:true,
+                //     name:'title',
+                //     bind:{
+                //         value:'{record.id}'
+                //     },
 
-                },{
-                    xtype:'htmleditor'
+                // },
+                {
+                    xtype:'htmleditor',
+                    name:'yourself',
+                    minLength:10
 
                 }],
             },
@@ -60,16 +71,20 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                     },
                     
                     
-                },{
-                    xtype:'textfield',
-                    hidden:true,
-                    bind:{
-                        value:'{record.id1}'
-                    },
+                },
+                // {
+                //     xtype:'textfield',
+                //     hidden:true,
+                //     name:'title',
+                //     bind:{
+                //         value:'{record.id1}'
+                //     },
 
-                },{
+                // },
+                {
                     layout:'form',
                     xtype:'dateformatfield',
+                    name:'dateOfBirth',
                     maxValue: Ext.Date.add(new Date(),Ext.Date.YEAR,-18),
                     reference:'dob',
                     listeners:{
@@ -79,6 +94,7 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                 },{
                     layout:'form',
                     xtype:'textfield',
+                    name:'age',
                     fieldLabel:'Age',
                     reference:'age',
                     //width:60,
@@ -106,24 +122,27 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                         },
                         
                         
-                    },{
-                        xtype:'textfield',
-                        hidden:true,
-                        bind:{
-                            value:'{record.id2}'
-                        },
-    
                     },
+                    // {
+                    //     xtype:'textfield',
+                    //     name:'title',
+                    //     hidden:true,
+                    //     bind:{
+                    //         value:'{record.id2}'
+                    //     },
+    
+                    // },
                     {
                         xtype: 'radiogroup',
+                        name:'contract',
                         vertical: true,
                         items: [
-                            { boxLabel: 'Yes', name: 'options', inputValue: 'Yes'},
-                            { boxLabel: 'No', name: 'options', inputValue: 'No'}
+                            { boxLabel: 'Yes', name: 'contract', inputValue: 'Yes'},
+                            { boxLabel: 'No', name: 'contract', inputValue: 'No'}
                         ],
                         listeners:{
                             change:"differentQs",
-                            //change:'onAnswered'
+                            
                         }
                     }]
 
@@ -140,15 +159,22 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                         html: '<h3>{record.id3}</h3>',
                     },
                     
-                },{
-                    xtype:'textfield',
-                    hidden:true,
-                    bind:{
-                        value:'{record.id3}'
-                    },
+                },
+                // {
+                //     xtype:'textfield',
+                //     name:'title',
+                //     hidden:true,
+                //     bind:{
+                //         value:'{record.id3}'
+                //     },
 
-                },{
+                // },
+                {
                     xtype: 'htmleditor',
+                    name:'differentOpportunity',
+                    listeners:{
+                        change:'pageTwo'
+                    }
         
                 }]
 
@@ -166,7 +192,7 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
             
             items:[{
                 hidden:true,
-                reference:'differentOpportunity',
+                reference:'disc',
                 items:[
                     {
                     bind:{
@@ -174,32 +200,97 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                     },  
                     
                 },{
-                    items:[{
-                        layout:'form',
-                        items:[{
-                            xtype:'textfield',
-                            hidden:true,
-                            bind:{
-                                value:'{record.id4}'
-                            },
+                    
+                        items:[
+                        //     {
+                        //     xtype:'textfield',
+                        //     name:'title',
+                        //     hidden:true,
+                        //     bind:{
+                        //         value:'{record.id4}'
+                        //     },
         
-                        },
+                        // },
+                        
                         {
                             xtype: 'radiogroup',
-                            vertical: true,
+                            name:'onedisc',
+                            //vertical: true,
+                            columns:[1, .75],
                             items: [
-                                { boxLabel: 'Dominant', name: 'options', inputValue: 'Dominant'},
-                                { boxLabel: 'I', name: 'options', inputValue: 'I'},
-                                { boxLabel: 'S', name: 'options', inputValue: 'S'},
-                                { boxLabel: 'C', name: 'options', inputValue: 'C'}
+                                
+                                { boxLabel: 'Active', name: 'onedisc', inputValue: 'D'},
+                                { boxLabel: 'Verbal', name: 'onedisc', inputValue: 'I'},
+                                { boxLabel: 'Singular', name: 'onedisc', inputValue: 'S'},
+                                { boxLabel: 'Rules', name: 'onedisc', inputValue: 'C'}
                             ],
                             listeners:{
                                 change:"sectionTwo",
                                 //change:'onAnswered'
                             }
-                        }]
-
-                    }]
+                        },{
+                            xtype: 'radiogroup',
+                            name:'twodisc',
+                            //vertical: true,
+                            columns:[1, .75],
+                            items: [
+                                
+                                { boxLabel: 'Aggresive', name: 'twodisc', inputValue: 'D'},
+                                { boxLabel: 'Persuader', name: 'twodisc', inputValue: 'I'},
+                                { boxLabel: 'Listener', name: 'twodisc', inputValue: 'S'},
+                                { boxLabel: 'Accuracy', name: 'twodisc', inputValue: 'C'}
+                            ],
+                            listeners:{
+                                change:"sectionTwo",
+                                //change:'onAnswered'
+                            }
+                        },{
+                            xtype: 'radiogroup',
+                            vertical: true,
+                            name:'threedisc',
+                            items: [
+                                
+                                { boxLabel: 'Direct', name: 'threedisc', inputValue: 'D'},
+                                { boxLabel: 'Joyful', name: 'threedisc', inputValue: 'I'},
+                                { boxLabel: 'Low risk', name: 'threedisc', inputValue: 'S'},
+                                { boxLabel: 'Details', name: 'threedisc', inputValue: 'C'}
+                            ],
+                            listeners:{
+                                change:"sectionTwo",
+                                //change:'onAnswered'
+                            }
+                        },{
+                            xtype: 'radiogroup',
+                            vertical: true,
+                            name:'fourdisc',
+                            items: [
+                                
+                                { boxLabel: 'Overcomer', name: 'fourdisc', inputValue: 'D'},
+                                { boxLabel: 'Optimistic', name: 'fourdisc', inputValue: 'I'},
+                                { boxLabel: 'Friendly', name: 'fourdisc', inputValue: 'S'},
+                                { boxLabel: 'Careful', name: 'fourdisc', inputValue: 'C'}
+                            ],
+                            listeners:{
+                                change:"sectionTwo",
+                                //change:'onAnswered'
+                            }
+                        },{
+                            xtype: 'radiogroup',
+                            vertical: true,
+                            name:'fivedisc',
+                            items: [
+                                
+                                { boxLabel: 'Solver', name: 'fivedisc', inputValue: 'D'},
+                                { boxLabel: 'Emotional', name: 'fivedisc', inputValue: 'I'},
+                                { boxLabel: 'Loyal', name: 'fivedisc', inputValue: 'S'},
+                                { boxLabel: 'Analytical', name: 'fivedisc', inputValue: 'C'}
+                            ],
+                            listeners:{
+                                change:"sectionTwo",
+                                //change:'onAnswered'
+                            }
+                        }
+                    ]
                 }]
         }]
     }]
@@ -207,41 +298,209 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
 },{
     id:'card-2',
     iconCls:'fas fa-pen',
-    title:'Love Language and Communication Styllle Test',
+    title:'Technical Section',
     padding:10,
     items:[
         {
             title: 'Question 6',
             
             items:[{
-                hidden:true,
-                reference:'loveLanguageSection',
-                items:[{
-                    bind:{
-                        html: '<h3>{record.id5}</h3>',
-                    },
-                    
-                    
+                //hidden:true,
+                reference:'technicalSection',
+                items:[
+                    {
+                        xtype:'fieldset',
+                        bind:{
+                            title: '{record.id5}',
+                        },
+                        items:[
+                            
+                            {
+                                xtype: 'dateformatfield',
+                                width:500,
+                                name:'startProgramming'
+                            }
+                        ]
                 },{
-                    xtype:'textfield',
-                    hidden:true,
-                    bind:{
-                        value:'{record.id5}'
-                    },
+                    layout:'hbox',
+                    items:[
+                        {
+                            xtype:'fieldset',
+                            
+                            bind:{
+                                title: '{record.id6}',
+                            },
+                            items:[
+                                
+                                {
+                                    xtype: 'combo',
+                                    name:'versionControl',
+                                    valueField: 'versionControl',
+                                    queryMode:'local',
+                                    store:['Git','Mercurial','Concurrent Versions system(CVS),Apache Subversion(SVN)','None'],
+                                    displayField:'versionControl',
+                                    autoSelect:true,
+                                    forceSelection:true,
+                                    reference:'versionControlCombo',
+                                    listeners:{
+                                        select:'versionSelect'
+    
+                                    }
+                                },
+                                
+                            ]
+                        },
+                        {
+                            xtype:'fieldset',
+                            reference:'storeProjects',
+                            hidden:true,
+                            bind:{
+                                title: '{record.id7}',
+                            },
+                            items:[
+                                
+                                {
+                                    xtype: 'textfield',
+                                    name:'keepProjects',
+                                    listeners:{
+                                        change:'OntypeStore'
+                                    }
+                                    
+                                }
+                            ]
 
-                },{
-                    xtype: 'checkboxgroup',
-                    //vertical: true,
-                    items: [
-                        { boxLabel: 'Physical', name: 'options', inputValue: 'physical'},
-                        { boxLabel: 'Words', name: 'options', inputValue: 'words'},
-                        { boxLabel: 'Service', name: 'options', inputValue: 'Service'},
-                        { boxLabel: 'Gifts', name: 'options', inputValue: 'gifts'}
-                    ],
-                    listeners:{
-                        change:"loveLanguage",
+                        },
+                        {
+                            xtype:'fieldset',
+                            hidden:true,
+                            reference:'versionUrl',
+                            bind:{
+                                title: '{record.id8}',
+                            },
+                            items:[
+                                
+                                {
+                                    xtype: 'textfield',
+                                    name:'versionurl',
+                                    vtype:'url',
+                                    listeners:{
+                                        change:'OnVersionUrl'
+                                    }
+                                    
+                                }
+                            ]
+
+                        },
+                        
+
+
+                    ]
+                
+                    
+            },
+            {
+                xtype:'fieldset',
+                hidden:true,
+                reference:'languages',
+                bind:{
+                    title: '{record.id9}',
+                },
+                items:[
+                    
+                    {
+                        xtype: 'tagfield',
+                        name:'languages',
+                        store:{
+                            type:'languages'
+                        },
+                        valueField: 'languages',
+                        queryMode:'local',
+                        displayField:'languages',
+                        forceSelection:true,
+                        filterPickList: true,
+                        listeners:{
+                            select:'OnlanguageSelect'
+                        }
+                        
+                        
                     }
-                }]
+                ]
+
+            },
+            {
+                xtype:'fieldset',
+                hidden:true,
+                reference:'framework',
+                bind:{
+                    title: '{record.id10}',
+                },
+                items:[
+                    
+                    {
+                        xtype: 'checkboxgroup',
+                        name:'framework',
+                            //vertical: true,
+                        //columns:3,
+                        items: [
+                                
+                            { boxLabel: 'Ruby on rails', name: 'framework', inputValue: 'Ruby on rails'},
+                            { boxLabel: 'Django', name: 'framework', inputValue: 'Django'},
+                            { boxLabel: '.Net', name: 'framework', inputValue: '.Net'},
+                            { boxLabel: 'Meteor', name: 'framework', inputValue: 'Meteor'},
+                            { boxLabel: 'Laravel', name: 'framework', inputValue: 'Laravel'},
+                            { boxLabel: 'Express', name: 'framework', inputValue: 'Express'},
+                            { boxLabel: 'Spring', name: 'framework', inputValue: 'Spring'},
+                            { boxLabel: 'Play', name: 'framework', inputValue: 'Play'}
+                        ],
+                        listeners:{
+                            change:'Onframeworkchoose'
+                        }
+                    }
+                ]
+
+            },
+            {
+                xtype:'fieldset',
+                hidden:true,
+                reference:'ide',
+                bind:{
+                    title: '{record.id11}',
+                },
+                items:[
+                    
+                    {
+                        xtype: 'textfield',
+                        name:'ide',
+                        listeners:{
+                            change:'OnTypeIde'
+                        }
+
+                        
+                        
+                    }
+                ]
+                
+            },{
+                xtype: 'textfield',
+                name:'level',
+                hidden:true,
+                reference:'level',
+                listeners:{
+                    change:'onLevel'
+                }
+                
+            }
+                // {
+                //     xtype:'textfield',
+                //     hidden:true,
+                //     name:'title',
+                //     bind:{
+                //         value:'{record.id5}'
+                //     },
+
+                // },
+               
+            ]
 
             }]
         }]

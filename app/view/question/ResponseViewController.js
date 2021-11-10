@@ -1,15 +1,20 @@
 Ext.define('SurveyApp.view.question.ResponseViewController',{
     extend:'Ext.app.ViewController',
-
-    alias:'controller.questionviewcontroller',
-
+    alias:'controller.responseviewcontroller',
+    mixins: [
+        'SurveyApp.mixins.GenericMixin',
+    ],
+    
     init:function(){
-        //load store function implementation
+        var patientcontroller=this.getView();
+        var store=patientcontroller.getStore();
+        store.load();
     },
     onDetailsBtnClick:function(){
         //view selected record implememntation
     },
-    onRefreshBtnClick:function(){
+    onRefreshBtnCLick:function(){
+        this.loadGridStore();
         //grid refresh implementation done here
     },
     onRemoveBtnClick:function(){

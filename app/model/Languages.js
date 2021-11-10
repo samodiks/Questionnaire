@@ -1,0 +1,9 @@
+Ext.define('SurveyApp.model.Languages',{
+    extend:'Ext.data.Model',
+    fields:[
+    {
+        name:'languages',
+        type:'string'
+    }
+]
+})

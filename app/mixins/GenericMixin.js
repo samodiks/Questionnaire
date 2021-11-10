@@ -59,5 +59,11 @@ Ext.define('SurveyApp.mixins.GenericMixin',{
      */
      removeSelectedRecords:function(){
         //convert the whole thing into an array and send that to the ajax/end-point to remove the records
+    },
+    onChangeMixin:function(referenceField){
+        let view = this.getView();
+        let foundField = view.lookupReference(referenceField);
+        foundField.setVisible(true);
+
     }
 })

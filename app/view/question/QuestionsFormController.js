@@ -2,6 +2,9 @@ Ext.define('SurveyApp.view.question.QuestionsFormController',{
     extend:'Ext.app.ViewController',
 
     alias:'controller.questionsformcontroller',
+    mixins: [
+        'SurveyApp.mixins.GenericMixin',
+    ],
 
     init:function(){
         //form load fucntion implementation
@@ -17,12 +20,11 @@ Ext.define('SurveyApp.view.question.QuestionsFormController',{
         //agefield.setValue(Ext.Date.add(value, Ext.Date.YEAR, 10))
     },
     onChange:function(field, newValue, oldValue, eOpts) {
-        var view=this.getView();
-
-        if (newValue>=18) {
-            var period=view.lookupReference('systechPeriod');
-            period.setVisible(true);  
-        }
+        let find='systechPeriod';
+        this.onChangeMixin(find);
+        // var view=this.getView();
+        // var period=view.lookupReference('systechPeriod');
+        // period.setVisible(true);  
         
 
     },
@@ -30,23 +32,92 @@ Ext.define('SurveyApp.view.question.QuestionsFormController',{
         let view=this.getView();
         console.log(newValue.options);
         console.log(cmp.getValue())
-        if(newValue.options=='Yes'){
+        if(newValue.contract=='Yes'){
             var differentOpportunity=view.lookupReference('differentOpportunity');
             differentOpportunity.setVisible(true);
-        }else{
+        }else if(newValue.contract=='No'){
             var differentOpportunity=view.lookupReference('card-0');
-            differentOpportunity.setVisible(false);
+            console.log("hiiiii");
+            Ext.Msg.alert("Systech Questionnaire","Your response is highly appreciated")
+            view.destroy();
+            //differentOpportunity.setVisible(false);
             
         }
     },
-    sectionTwo:function(){
-        let view = this.getView();
-        let sectionTwoQns = view.lookupReference('loveLanguageSection');
-        sectionTwoQns.setVisible(true);
+    pageTwo:function(){
+        let find='disc';
+        this.onChangeMixin(find);
+        // let view = this.getView();
+        // let discEnable = view.lookupReference('disc');
+        // discEnable.setVisible(true);
+        
+
     },
-    loveLanguage:function(){
+
+    sectionTwo:function(){
+        let find='technicalSection';
+        this.onChangeMixin(find);
+        // let view = this.getView();
+        // let sectionTwoQns = view.lookupReference('technicalSection');
+        // sectionTwoQns.setVisible(true);
+    },
+    versionSelect: function(combo, record, eOpts) {
+        var  versionControl = combo.getValue();
+        if(versionControl=='None'){
+            let find='storeProjects';
+            this.onChangeMixin(find);
+        }else{
+            let find='versionUrl';
+            this.onChangeMixin(find);
+
+        }       
+
+    },
+    OnVersionUrl:function(){
+        let find='languages';
+        this.onChangeMixin(find);
+
+    },
+    OnlanguageSelect:function( combo, record, eOpts  ){
+        if(record.length>=2){
+            let view = this.getView();
+            let foundField = view.lookupReference('ide');
+            foundField.setVisible(false);
+            let find='framework';
+            this.onChangeMixin(find);
+            
+            
+
+        }else{
+            let find='ide';
+            this.onChangeMixin(find);
+
+        }
+        
+
+    },
+    Onframeworkchoose:function(){
         let view = this.getView();
-            loveSection = view.lookupReference('submit');
+        let levelValue = view.lookupReference('level');
+        levelValue.setValue('Expert')
+
+
+    },
+    OnTypeIde:function(){
+        let view = this.getView();
+        let levelValue = view.lookupReference('level');
+        levelValue.setValue('Intermediate')
+
+    },
+    OntypeStore:function(){
+        let view = this.getView();
+        let levelValue = view.lookupReference('level');
+        levelValue.setValue('Beginner')
+
+    },
+    onLevel:function(){
+        let view = this.getView();
+        let loveSection = view.lookupReference('submit');
         loveSection.setVisible(true);
     },
     onBackButton:function(btn, e, eOpts){
@@ -76,18 +147,15 @@ Ext.define('SurveyApp.view.question.QuestionsFormController',{
             cardpanel = window.lookupReference('cardpanel');
         this.navigate(cardpanel,"submit"); */
 
-        let me = this,
-            window = me.getView(),
-            form = window.lookupReference('questionnaire').getForm();
+        let me = this;
+        let window = me.getView();
+        let submitButton = window.lookupReference('submit');
+        let form=submitButton.up('form').getForm();
 
-        let id = form.findField('id').getValue(),
-          //  url = 'http://localhost:3000/responses/',    
-            method = 'POST';
         
-        if(id){
-            url += id;
-            method = 'PUT';
-        }
+        let url = 'http://localhost:3000/responses'; 
+        let method = 'POST';
+        
         if(form.isValid()){
             form.submit({
                 url:url,

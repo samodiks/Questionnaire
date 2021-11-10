@@ -100,14 +100,7 @@ Ext.define('SurveyApp.view.main.Main', {
         }
     },
 
-    items: [{
-        title: 'Home',
-        iconCls: 'fa-home',
-        // The following grid shares a store with the classic version's grid as well!
-        items: [{
-            xtype: 'mainlist'
-        }]
-    }, {
+    items: [ {
         title: 'Users',
         iconCls: 'fa-user',
         items: [{
@@ -119,18 +112,12 @@ Ext.define('SurveyApp.view.main.Main', {
         items: [{
             xtype: 'questionnaire'
         }]
+    },{
+        title: 'Responses',
+        iconCls: 'fa-user',
+        items: [{
+            xtype: 'responseview'
+        }]
     },
-    {
-        title: 'Groups',
-        iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }]
+    ]
 });
