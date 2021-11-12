@@ -30,36 +30,54 @@ Ext.define('SurveyApp.mixins.GenericMixin',{
         return records;
         
     },
-     removeSelectedRecord:function(){
-         Ext.Ajax.request({
-            url:url,
-            method:'DELETE',
-            success:function(response,eOpts){
-                let result = Classic.Util.jsonToPojo(response.responseText);
-                if(result.success){
-                    Ext.toast({
-                        html:'Deleted successfully',
-                        title:'Success',
-                        width:200,
-                        align:'t'
-                    });
-                }
-            },
-            failure:function(response,eOpts){
-                console.log(response.responseText);
-                let result = Classic.Util.jsonToPojo(response.responseText);
-                Classic.Util.showError(result.msg);
-            }            
-         });
-         grid.getStore().reload();
+    //  removeSelectedRecord:function(){
+    //      Ext.Ajax.request({
+    //         url:url,
+    //         method:'DELETE',
+    //         success:function(response,eOpts){
+    //             let result = Classic.Util.jsonToPojo(response.responseText);
+    //             if(result.success){
+    //                 Ext.toast({
+    //                     html:'Deleted successfully',
+    //                     title:'Success',
+    //                     width:200,
+    //                     align:'t'
+    //                 });
+    //             }
+    //         },
+    //         failure:function(response,eOpts){
+    //             console.log(response.responseText);
+    //             let result = Classic.Util.jsonToPojo(response.responseText);
+    //             Classic.Util.showError(result.msg);
+    //         }            
+    //      });
+    //      grid.getStore().reload();
         
-    },
+    // },
     /**
      * @method to delete multiple records
      */
-     removeSelectedRecords:function(){
-        //convert the whole thing into an array and send that to the ajax/end-point to remove the records
-    },
+    //  removeSelectedRecords:function(){
+    //     //convert the whole thing into an array and send that to the ajax/end-point to remove the records
+    // },
+    removeSelectedRecord: function(url, grid) {        
+        Ext.Ajax.request({
+            url: url,
+            method: 'DELETE',
+            
+            success: function(response, eOpts) {
+                console.log(response);
+                console.log(eOpts);
+            },
+            failure: function(response, eOpts) {
+                console.log(response);
+                console.log(eOpts);
+            }
+        });
+             
+grid.getStore().reload();
+
+},
     onChangeMixin:function(referenceField){
         let view = this.getView();
         let foundField = view.lookupReference(referenceField);

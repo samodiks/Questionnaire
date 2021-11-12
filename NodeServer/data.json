@@ -20,51 +20,6 @@
   ],
   "responses": [
     {
-      "yourself": "eeeeeeeeeeeeeeeeeeee​",
-      "dateOfBirth": "04-11-2003",
-      "age": "18",
-      "contract": "Yes",
-      "differentOpportunity": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr​",
-      "onedisc": "D",
-      "twodisc": "I",
-      "threedisc": "D",
-      "fourdisc": "I",
-      "fivedisc": "S",
-      "options": "words",
-      "id": 1
-    },
-    {
-      "yourself": "gggggggggg​",
-      "dateOfBirth": "04-11-2003",
-      "age": "18",
-      "contract": "Yes",
-      "differentOpportunity": "eeeeeeeeeeeeeeeeeeeeeeeeeeeee​",
-      "onedisc": "I",
-      "twodisc": "C",
-      "threedisc": "I",
-      "fourdisc": "D",
-      "fivedisc": "C",
-      "options": [
-        "words",
-        "Service"
-      ],
-      "id": 2
-    },
-    {
-      "yourself": "ffffffffffffffffffff​",
-      "dateOfBirth": "04-11-2003",
-      "age": "18",
-      "contract": "Yes",
-      "differentOpportunity": "ggggggggggggggggggggggg​",
-      "onedisc": "D",
-      "twodisc": "I",
-      "threedisc": "D",
-      "fourdisc": "D",
-      "fivedisc": "D",
-      "options": "words",
-      "id": 3
-    },
-    {
       "yourself": "rrrrrrrrrrrrrrrrrrrrrrr​",
       "dateOfBirth": "04-11-2003",
       "age": "18",
@@ -107,6 +62,26 @@
       "ide": "Intell ij",
       "level": "Intermediate",
       "id": 5
+    },
+    {
+      "yourself": "rrrrrrrrrrrrrrrrrrrr​",
+      "dateOfBirth": "03-11-2003",
+      "age": "18",
+      "contract": "Yes",
+      "differentOpportunity": "yyyyyyyyyyyy​",
+      "onedisc": "D",
+      "twodisc": "I",
+      "threedisc": "S",
+      "fourdisc": "S",
+      "fivedisc": "S",
+      "startProgramming": "10-11-2021",
+      "versionControl": "None",
+      "keepProjects": "laptop",
+      "versionurl": "",
+      "languages": "",
+      "ide": "",
+      "level": "Beginner",
+      "id": 6
     }
   ]
 }

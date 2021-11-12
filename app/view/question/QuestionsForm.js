@@ -216,7 +216,7 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                             xtype: 'radiogroup',
                             name:'onedisc',
                             //vertical: true,
-                            columns:[1, .75],
+                            //columns:[1, .75],
                             items: [
                                 
                                 { boxLabel: 'Active', name: 'onedisc', inputValue: 'D'},
@@ -232,7 +232,7 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                             xtype: 'radiogroup',
                             name:'twodisc',
                             //vertical: true,
-                            columns:[1, .75],
+                            //columns:[1, .75],
                             items: [
                                 
                                 { boxLabel: 'Aggresive', name: 'twodisc', inputValue: 'D'},

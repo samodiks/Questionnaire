@@ -33,54 +33,54 @@ Ext.define('SurveyApp.view.question.ResponseView',{
             dataIndex:'contract',
             
         },{
-            text:'contract',
+            text:'differentOpportunity',
             dataIndex:'differentOpportunity',
             
         },{
-        //     text:'contract',
-        //     dataIndex:'onedisc',
+            text:'onedisc',
+            dataIndex:'onedisc',
             
-        // },
-        //{
-            text:'contract',
+        },
+        {
+            text:'twodisc',
             dataIndex:'twodisc',
             
         },{
-            text:'contract',
+            text:'threedisc',
             dataIndex:'threedisc',
             
         },{
-            text:'contract',
+            text:'fourdisc',
             dataIndex:'fourdisc',
             
         },{
-            text:'contract',
+            text:'fivedisc',
             dataIndex:'fivedisc',
             
         },{
             dataIndex:'startProgramming',
-            text:'string'
+            text:'startProgramming'
         },{
             dataIndex:'versionControl',
-            text:'string'
+            text:'versionControl'
         },{
             dataIndex:'keepProjects',
-            text:'string'
+            text:'keepProjects'
         },{
             dataIndex:'versionurl',
-            text:'string'
+            text:'versionurl'
         },{
             dataIndex:'languages',
-            text:'string'
+            text:'languages'
         },{
             dataIndex:'framework',
-            text:'string'
+            text:'framework'
         },{
             dataIndex:'ide',
-            text:'string'
+            text:'ide'
         },{
             dataIndex:'level',
-            text:'string'
+            text:'level'
         }
     ],
     features:[
@@ -88,15 +88,17 @@ Ext.define('SurveyApp.view.question.ResponseView',{
             ftype:'grouping'
         }
     ],
-    tbar:[{
-        text:'Add Question',
-        tooltip:'Add new Question',
-        handler:'onAddBtnClick'
-    },{
-        text:'Details',
-        tooltip:'Details of selected Question',
-        handler:'OnDetailsBtnClick'
-    },{
+    tbar:[
+    //     {
+    //     text:'Add Question',
+    //     tooltip:'Add new Question',
+    //     handler:'onAddBtnClick'
+    // },{
+    //     text:'Details',
+    //     tooltip:'Details of selected Question',
+    //     handler:'OnDetailsBtnClick'
+    // },
+    {
         text:'Refresh',
         tooltip:'Refresh Page',
         handler:'onRefreshBtnCLick'
@@ -105,5 +107,6 @@ Ext.define('SurveyApp.view.question.ResponseView',{
         tooltip:'Remove Question',
         handler:'onRemoveBtnClick'
     }],
+    selModel:'checkboxmodel'
     
 })
