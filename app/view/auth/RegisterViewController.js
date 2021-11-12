@@ -1,23 +1,22 @@
-Ext.define('SurveyApp.view.question.ResponseViewController',{
+Ext.define('SurveyApp.view.auth.RegisterViewController',{
     extend:'Ext.app.ViewController',
-    alias:'controller.responseviewcontroller',
-    mixins: [
-        'SurveyApp.mixins.GenericMixin',
+    alias:'controller.registerviewcontroller',
+    mixins:[
+        'SurveyApp.mixins.GenericMixin'
     ],
-    
     init:function(){
-        var response=this.getView();
-        var store=response.getStore();
+        var register=this.getView();
+        var store=register.getStore();
         store.load();
     },
     showForm: function(record)
     {
         let window = Ext.create(
             {
-                xtype:'questionnaire'
+                xtype:'registerform'
             });
             if(record){
-                window.lookupReference('cardpanel').getForm().loadRecord(record);
+                window.lookupReference('register-form').getForm().loadRecord(record);
             }
     },
     onDetailsBtnClick:function(){
@@ -26,12 +25,12 @@ Ext.define('SurveyApp.view.question.ResponseViewController',{
            record = me.getSelectedRecord();
         if(record){
             this.showForm(record);
-        }
-
+        }    
     },
     onRefreshBtnCLick:function(){
         //grid refresh implementation done here
         this.loadGridStore();
+
     },
     onRemoveBtnClick:function(){
         //remove selected element(s) imlementation

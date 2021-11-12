@@ -63,7 +63,8 @@ Ext.define('SurveyApp.view.main.Main', {
                     click:'onLogout'
                 }
                
-        }, {   
+        }
+ /*        , {   
             text: 'Change PassWord',
             xtype:'button',
             iconCls: 'fas fa-sign-out',
@@ -71,7 +72,7 @@ Ext.define('SurveyApp.view.main.Main', {
                 click:'changePassword'
             }
         
-    }
+    } */
     ],
 
     responsiveConfig: {
@@ -100,24 +101,25 @@ Ext.define('SurveyApp.view.main.Main', {
         }
     },
 
-    items: [ {
-        title: 'Users',
-        iconCls: 'fa-user',
-        items: [{
-            xtype: 'registerform'
-        }]
-    }, {
-        title: 'Questionnaire',
-        iconCls: 'fa-user',
-        items: [{
-            xtype: 'questionnaire'
-        }]
-    },{
+    items: [{
         title: 'Responses',
-        iconCls: 'fa-user',
+        iconCls: 'fa-book',
         items: [{
             xtype: 'responseview'
         }]
+    }, {
+        title: 'Questionnaire',
+        iconCls: 'fa-pen',
+        items: [{
+            xtype: 'questionnaire'
+        }]
     },
+    {
+        title: 'Users',
+        iconCls: 'fa-user',
+        items: [{
+            xtype: 'registerview'
+        }]
+    }
     ]
 });

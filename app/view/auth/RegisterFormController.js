@@ -59,5 +59,4 @@ Ext.define('SurveyApp.view.auth.RegisterFormController',{
             })
         }
     }
-
 })

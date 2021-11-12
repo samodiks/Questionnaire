@@ -15,24 +15,10 @@
       "username": "odi",
       "email": "odikor@gmail.com",
       "dor": "2021-11-02T21:00:00.000Z",
-      "pass": "samuelodikor"
+      "password": "samuelodikor"
     }
   ],
   "responses": [
-    {
-      "yourself": "eeeeeeeeeeeeeeeeeeee​",
-      "dateOfBirth": "04-11-2003",
-      "age": "18",
-      "contract": "Yes",
-      "differentOpportunity": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr​",
-      "onedisc": "D",
-      "twodisc": "I",
-      "threedisc": "D",
-      "fourdisc": "I",
-      "fivedisc": "S",
-      "options": "words",
-      "id": 1
-    },
     {
       "yourself": "gggggggggg​",
       "dateOfBirth": "04-11-2003",
@@ -107,6 +93,35 @@
       "ide": "Intell ij",
       "level": "Intermediate",
       "id": 5
+    },
+    {
+      "yourself": "zsdgsdgshdkhhak​",
+      "dateOfBirth": "02-11-2003",
+      "age": "18",
+      "contract": "Yes",
+      "differentOpportunity": "yes​",
+      "onedisc": "D",
+      "twodisc": "S",
+      "threedisc": "I",
+      "fourdisc": "S",
+      "fivedisc": "C",
+      "startProgramming": "01-11-2021",
+      "versionControl": "Concurrent Versions system(CVS),Apache Subversion(SVN)",
+      "keepProjects": "",
+      "versionurl": "https://github.com/samodiks/Questionnaire",
+      "languages": [
+        "php",
+        "javascript",
+        "java"
+      ],
+      "framework": [
+        ".Net",
+        "Laravel",
+        "Spring"
+      ],
+      "ide": "",
+      "level": "Expert",
+      "id": 6
     }
   ]
 }

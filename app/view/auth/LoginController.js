@@ -14,7 +14,7 @@ Ext.define('SurveyApp.view.auth.LoginController', {
                 }
                 else 
                 {
-                    Ext.Msg.alert('Invalid Email or Password');
+                    Ext.Msg.alert('Invalid Username or Password');
                     return;
                 }
             }
@@ -33,9 +33,9 @@ Ext.define('SurveyApp.view.auth.LoginController', {
         form = window.lookupReference('loginform').getForm();
         var formdata = form.getValues();
         var statics = this.statics();
-        
+      //  var record = records[0];
         Ext.Ajax.request({
-            url: `http://localhost:3000/logins/${1}`,
+            url: `http://localhost:3000/logins/${2}`,
             method: 'GET',
             success: function(response, eOpts) {
                statics.helper(response, formdata, me);

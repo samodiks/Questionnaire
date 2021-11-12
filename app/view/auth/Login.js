@@ -6,7 +6,6 @@
 
     bodyPadding: 10,
     width: 600,
-   // autoSize: true,
     closable:true,
     autoShow:true,
     requires:[

@@ -42,7 +42,7 @@ Ext.define('SurveyApp.view.auth.RegisterForm',{
                     maxValue:new Date(),
                 },{ 
                     xtype:'textfield',
-                    name:'pass',
+                    name:'password',
                     inputType:'password',
                     fieldLabel:'Password',
                     vtype:'password',

@@ -45,15 +45,6 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                     },
                     
                 },
-                // {
-                //     xtype:'textfield',
-                //     hidden:true,
-                //     name:'title',
-                //     bind:{
-                //         value:'{record.id}'
-                //     },
-
-                // },
                 {
                     xtype:'htmleditor',
                     name:'yourself',
@@ -72,15 +63,6 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                     
                     
                 },
-                // {
-                //     xtype:'textfield',
-                //     hidden:true,
-                //     name:'title',
-                //     bind:{
-                //         value:'{record.id1}'
-                //     },
-
-                // },
                 {
                     layout:'form',
                     xtype:'dateformatfield',
@@ -97,7 +79,6 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                     name:'age',
                     fieldLabel:'Age',
                     reference:'age',
-                    //width:60,
                     readOnly:true,
                     listeners:{
                         change:"onChange"    
@@ -123,15 +104,6 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                         
                         
                     },
-                    // {
-                    //     xtype:'textfield',
-                    //     name:'title',
-                    //     hidden:true,
-                    //     bind:{
-                    //         value:'{record.id2}'
-                    //     },
-    
-                    // },
                     {
                         xtype: 'radiogroup',
                         name:'contract',
@@ -160,15 +132,6 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                     },
                     
                 },
-                // {
-                //     xtype:'textfield',
-                //     name:'title',
-                //     hidden:true,
-                //     bind:{
-                //         value:'{record.id3}'
-                //     },
-
-                // },
                 {
                     xtype: 'htmleditor',
                     name:'differentOpportunity',
@@ -202,20 +165,9 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                 },{
                     
                         items:[
-                        //     {
-                        //     xtype:'textfield',
-                        //     name:'title',
-                        //     hidden:true,
-                        //     bind:{
-                        //         value:'{record.id4}'
-                        //     },
-        
-                        // },
-                        
                         {
                             xtype: 'radiogroup',
                             name:'onedisc',
-                            //vertical: true,
                             columns:[1, .75],
                             items: [
                                 
@@ -226,12 +178,10 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                             ],
                             listeners:{
                                 change:"sectionTwo",
-                                //change:'onAnswered'
                             }
                         },{
                             xtype: 'radiogroup',
                             name:'twodisc',
-                            //vertical: true,
                             columns:[1, .75],
                             items: [
                                 
@@ -242,7 +192,6 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                             ],
                             listeners:{
                                 change:"sectionTwo",
-                                //change:'onAnswered'
                             }
                         },{
                             xtype: 'radiogroup',
@@ -257,7 +206,6 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                             ],
                             listeners:{
                                 change:"sectionTwo",
-                                //change:'onAnswered'
                             }
                         },{
                             xtype: 'radiogroup',
@@ -272,7 +220,6 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                             ],
                             listeners:{
                                 change:"sectionTwo",
-                                //change:'onAnswered'
                             }
                         },{
                             xtype: 'radiogroup',
@@ -287,7 +234,6 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                             ],
                             listeners:{
                                 change:"sectionTwo",
-                                //change:'onAnswered'
                             }
                         }
                     ]
@@ -439,8 +385,6 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                     {
                         xtype: 'checkboxgroup',
                         name:'framework',
-                            //vertical: true,
-                        //columns:3,
                         items: [
                                 
                             { boxLabel: 'Ruby on rails', name: 'framework', inputValue: 'Ruby on rails'},
@@ -489,18 +433,7 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                     change:'onLevel'
                 }
                 
-            }
-                // {
-                //     xtype:'textfield',
-                //     hidden:true,
-                //     name:'title',
-                //     bind:{
-                //         value:'{record.id5}'
-                //     },
-
-                // },
-               
-            ]
+            }]
 
             }]
         }]

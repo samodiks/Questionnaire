@@ -8,94 +8,83 @@ Ext.define('SurveyApp.view.question.ResponseView',{
     },
     title:'List of Questions',
     columns: [
-        // {
-        //     dataIndex:'title',
-        //     text:'string'
-        // },
         {
             
-            text:'id',
+            text:'ID',
             dataIndex:'id',
         },{
             
-            text:'yourself',
+            text:'Respondent',
             dataIndex:'yourself',
         },{
-            
-            text:'date',
-            dataIndex:'dateOfBirth',
-        },{
-            text:'age',
+            text:'Current Age',
             dataIndex:'age',
             
         },{
-            text:'contract',
+            text:'Contract',
             dataIndex:'contract',
             
         },{
-            text:'contract',
+            text:'On Opportunities',
             dataIndex:'differentOpportunity',
             
         },{
-        //     text:'contract',
-        //     dataIndex:'onedisc',
-            
-        // },
-        //{
-            text:'contract',
+    
+            text:'Two Disc Personality',
             dataIndex:'twodisc',
             
         },{
-            text:'contract',
+            text:'Three Disc Personality',
             dataIndex:'threedisc',
             
         },{
-            text:'contract',
+            text:'Four Disc Personality',
             dataIndex:'fourdisc',
             
         },{
-            text:'contract',
+            text:'Five Disc Personality',
             dataIndex:'fivedisc',
             
         },{
             dataIndex:'startProgramming',
-            text:'string'
+            text:'Programming'
         },{
             dataIndex:'versionControl',
-            text:'string'
+            text:'Version control'
         },{
             dataIndex:'keepProjects',
-            text:'string'
+            text:'Projects'
         },{
             dataIndex:'versionurl',
-            text:'string'
+            text:'VCS Link'
         },{
             dataIndex:'languages',
-            text:'string'
+            text:'Programming Languages'
         },{
             dataIndex:'framework',
-            text:'string'
+            text:'Frameworks'
         },{
             dataIndex:'ide',
-            text:'string'
+            text:'Text Editors'
         },{
             dataIndex:'level',
-            text:'string'
+            text:'Level'
         }
     ],
+    selModel:'checkboxmodel',
     features:[
         {
             ftype:'grouping'
         }
     ],
-    tbar:[{
+    tbar:[/* {
         text:'Add Question',
         tooltip:'Add new Question',
         handler:'onAddBtnClick'
-    },{
+    }, */{
         text:'Details',
         tooltip:'Details of selected Question',
-        handler:'OnDetailsBtnClick'
+        handler:'onDetailsBtnClick'
     },{
         text:'Refresh',
         tooltip:'Refresh Page',
@@ -104,6 +93,6 @@ Ext.define('SurveyApp.view.question.ResponseView',{
         text:'Remove',
         tooltip:'Remove Question',
         handler:'onRemoveBtnClick'
-    }],
-    
+    }]
+   
 })
