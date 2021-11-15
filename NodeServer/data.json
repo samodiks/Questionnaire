@@ -1,17 +1,7 @@
 {
   "logins": [
-    {
+       {
       "id": 1,
-      "username": "chai",
-      "password": "chai12"
-    },
-    {
-      "id": 2,
-      "username": "rose",
-      "password": "ann12"
-    },
-    {
-      "id": 3,
       "username": "odi",
       "email": "odikor@gmail.com",
       "dor": "2021-11-02T21:00:00.000Z",

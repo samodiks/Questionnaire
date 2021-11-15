@@ -6,7 +6,7 @@ Ext.define('SurveyApp.view.auth.RegisterFormController',{
         'Ext.form.Panel'
     ],
 
-    onclickReset:function(){
+    onClickReset:function(){
         let me = this,
             window =me.getView(),
             form = window.lookupReference('register-form').getForm();

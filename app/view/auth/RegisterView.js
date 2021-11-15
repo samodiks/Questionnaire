@@ -5,18 +5,18 @@ Ext.define('SurveyApp.view.auth.RegisterView',{
     controller:'registerviewcontroller',
 
     title:'List of Registerd Users',
-    strore:{
-        type:'register'
+    store:{
+        type:'registers'
     },
     columns:[{
-        text:'ID',
+        text:'User ID',
         dataIndex:'id',
     },{
         text:'Username',
         dataIndex:'username',
     },{
         text:'Email',
-        dataIndex:'username',
+        dataIndex:'email',
         flex:3
     },{
         text:'Date of Registration',
@@ -42,5 +42,11 @@ Ext.define('SurveyApp.view.auth.RegisterView',{
         text:'Remove',
         tooltip:'Remove User',
         handler:'onRemoveBtnClick'
-    }]
+    }],
+    bbar:
+    {
+        xtype:'pagingtoolbar',
+        displayInfo: true,
+    },
+    selModel:'checkboxmodel',
 })

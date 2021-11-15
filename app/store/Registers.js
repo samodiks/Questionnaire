@@ -1,7 +1,7 @@
 Ext.define('SurveyApp.store.Registers',{
     extend:'Ext.data.Store',
-    alias:'store.register',
-    storeId:'register',
+    alias:'store.registers',
+    storeId:'registers',
     model:'SurveyApp.model.Register',
 
     proxy:{

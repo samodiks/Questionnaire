@@ -1,8 +1,12 @@
 Ext.define('SurveyApp.view.auth.RegisterForm',{
-    extend:'Ext.form.Panel',
+    extend:'Ext.window.Window',
     xtype:'registerform',
     alias:'registerform',
     controller:'registerformcontroller',
+    width:600,
+    shadow:true,
+    modal:true,
+    autoShow:true,
 
 
     title:'User Registeration',
@@ -14,7 +18,7 @@ Ext.define('SurveyApp.view.auth.RegisterForm',{
             jsonSubmit:true,
             defaults:{
                 anchor:'100%',
-                padding:10
+                padding:15
             },
             items:[
                 {

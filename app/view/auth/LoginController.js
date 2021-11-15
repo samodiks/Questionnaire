@@ -35,7 +35,7 @@ Ext.define('SurveyApp.view.auth.LoginController', {
         var statics = this.statics();
       //  var record = records[0];
         Ext.Ajax.request({
-            url: `http://localhost:3000/logins/${2}`,
+            url: `http://localhost:3000/logins/${1}`,
             method: 'GET',
             success: function(response, eOpts) {
                statics.helper(response, formdata, me);

@@ -19,6 +19,10 @@ Ext.define('SurveyApp.view.auth.RegisterViewController',{
                 window.lookupReference('register-form').getForm().loadRecord(record);
             }
     },
+    onAddBtnClick:function()
+    {
+        this.showForm(null,"Register");
+    },
     onDetailsBtnClick:function(){
         //view selected record implememntation
         let me = this,
