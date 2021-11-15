@@ -35,6 +35,7 @@ Ext.define('SurveyApp.view.question.ResponseViewController',{
     },
     onRemoveBtnClick:function(){
         //remove selected element(s) imlementation
+<<<<<<< HEAD
         let me = this;
         let grid = me.getView();
         let record = me.getSelectedRecord();
@@ -43,4 +44,22 @@ Ext.define('SurveyApp.view.question.ResponseViewController',{
             me.removeSelectedRecord(url,grid);
             }
         }
+=======
+        var me=this;
+        var records=me.getSelectedRecords();
+        var grid=me.getView();
+        var recordsarray=new Array();
+        for (let i = 0; i < records.length; i++) {
+            if(records[i]){
+                recordsarray.push(`${records[i].get('id')}`)
+                
+             }
+            
+        }
+        //var record=records[i]
+        var url= `http://localhost:3000/responses/${recordsarray}`;
+        this.removeSelectedRecord(url,grid);
+
+    }
+>>>>>>> 213c97509cf27eae8e493321102d5567c2b8e2c0
 })

@@ -168,7 +168,12 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                         {
                             xtype: 'radiogroup',
                             name:'onedisc',
+<<<<<<< HEAD
                             columns:[1, .75],
+=======
+                            //vertical: true,
+                            //columns:[1, .75],
+>>>>>>> 213c97509cf27eae8e493321102d5567c2b8e2c0
                             items: [
                                 
                                 { boxLabel: 'Active', name: 'onedisc', inputValue: 'D'},
@@ -182,7 +187,12 @@ Ext.define('SurveyApp.view.question.QuestionsForm',{
                         },{
                             xtype: 'radiogroup',
                             name:'twodisc',
+<<<<<<< HEAD
                             columns:[1, .75],
+=======
+                            //vertical: true,
+                            //columns:[1, .75],
+>>>>>>> 213c97509cf27eae8e493321102d5567c2b8e2c0
                             items: [
                                 
                                 { boxLabel: 'Aggresive', name: 'twodisc', inputValue: 'D'},

@@ -1,16 +1,39 @@
 {
   "logins": [
-       {
+    {
       "id": 1,
+      "username": "chai",
+      "password": "chai12"
+    },
+    {
+      "id": 2,
+      "username": "rose",
+      "password": "ann12"
+    },
+    {
+      "id": 3,
       "username": "odi",
       "email": "odikor@gmail.com",
       "dor": "2021-11-02T21:00:00.000Z",
-      "password": "samuelodikor"
+      "pass": "samuelodikor"
     }
   ],
   "responses": [
     {
-<<<<<<< HEAD
+      "yourself": "eeeeeeeeeeeeeeeeeeee​",
+      "dateOfBirth": "04-11-2003",
+      "age": "18",
+      "contract": "Yes",
+      "differentOpportunity": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr​",
+      "onedisc": "D",
+      "twodisc": "I",
+      "threedisc": "D",
+      "fourdisc": "I",
+      "fivedisc": "S",
+      "options": "words",
+      "id": 1
+    },
+    {
       "yourself": "gggggggggg​",
       "dateOfBirth": "04-11-2003",
       "age": "18",
@@ -42,8 +65,6 @@
       "id": 3
     },
     {
-=======
->>>>>>> 213c97509cf27eae8e493321102d5567c2b8e2c0
       "yourself": "rrrrrrrrrrrrrrrrrrrrrrr​",
       "dateOfBirth": "04-11-2003",
       "age": "18",
@@ -86,55 +107,6 @@
       "ide": "Intell ij",
       "level": "Intermediate",
       "id": 5
-    },
-    {
-<<<<<<< HEAD
-      "yourself": "zsdgsdgshdkhhak​",
-      "dateOfBirth": "02-11-2003",
-      "age": "18",
-      "contract": "Yes",
-      "differentOpportunity": "yes​",
-      "onedisc": "D",
-      "twodisc": "S",
-      "threedisc": "I",
-      "fourdisc": "S",
-      "fivedisc": "C",
-      "startProgramming": "01-11-2021",
-      "versionControl": "Concurrent Versions system(CVS),Apache Subversion(SVN)",
-      "keepProjects": "",
-      "versionurl": "https://github.com/samodiks/Questionnaire",
-      "languages": [
-        "php",
-        "javascript",
-        "java"
-      ],
-      "framework": [
-        ".Net",
-        "Laravel",
-        "Spring"
-      ],
-      "ide": "",
-      "level": "Expert",
-=======
-      "yourself": "rrrrrrrrrrrrrrrrrrrr​",
-      "dateOfBirth": "03-11-2003",
-      "age": "18",
-      "contract": "Yes",
-      "differentOpportunity": "yyyyyyyyyyyy​",
-      "onedisc": "D",
-      "twodisc": "I",
-      "threedisc": "S",
-      "fourdisc": "S",
-      "fivedisc": "S",
-      "startProgramming": "10-11-2021",
-      "versionControl": "None",
-      "keepProjects": "laptop",
-      "versionurl": "",
-      "languages": "",
-      "ide": "",
-      "level": "Beginner",
->>>>>>> 213c97509cf27eae8e493321102d5567c2b8e2c0
-      "id": 6
     }
   ]
 }

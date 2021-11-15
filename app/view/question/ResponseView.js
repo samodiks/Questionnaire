@@ -25,6 +25,7 @@ Ext.define('SurveyApp.view.question.ResponseView',{
             dataIndex:'contract',
             
         },{
+<<<<<<< HEAD
             text:'On Opportunities',
             dataIndex:'differentOpportunity',
             
@@ -43,10 +44,35 @@ Ext.define('SurveyApp.view.question.ResponseView',{
             
         },{
             text:'Five Disc Personality',
+=======
+            text:'differentOpportunity',
+            dataIndex:'differentOpportunity',
+            
+        },{
+            text:'onedisc',
+            dataIndex:'onedisc',
+            
+        },
+        {
+            text:'twodisc',
+            dataIndex:'twodisc',
+            
+        },{
+            text:'threedisc',
+            dataIndex:'threedisc',
+            
+        },{
+            text:'fourdisc',
+            dataIndex:'fourdisc',
+            
+        },{
+            text:'fivedisc',
+>>>>>>> 213c97509cf27eae8e493321102d5567c2b8e2c0
             dataIndex:'fivedisc',
             
         },{
             dataIndex:'startProgramming',
+<<<<<<< HEAD
             text:'Programming'
         },{
             dataIndex:'versionControl',
@@ -69,6 +95,30 @@ Ext.define('SurveyApp.view.question.ResponseView',{
         },{
             dataIndex:'level',
             text:'Level'
+=======
+            text:'startProgramming'
+        },{
+            dataIndex:'versionControl',
+            text:'versionControl'
+        },{
+            dataIndex:'keepProjects',
+            text:'keepProjects'
+        },{
+            dataIndex:'versionurl',
+            text:'versionurl'
+        },{
+            dataIndex:'languages',
+            text:'languages'
+        },{
+            dataIndex:'framework',
+            text:'framework'
+        },{
+            dataIndex:'ide',
+            text:'ide'
+        },{
+            dataIndex:'level',
+            text:'level'
+>>>>>>> 213c97509cf27eae8e493321102d5567c2b8e2c0
         }
     ],
     selModel:'checkboxmodel',
@@ -77,6 +127,7 @@ Ext.define('SurveyApp.view.question.ResponseView',{
             ftype:'grouping'
         }
     ],
+<<<<<<< HEAD
     tbar:[/* {
         text:'Add Question',
         tooltip:'Add new Question',
@@ -86,6 +137,19 @@ Ext.define('SurveyApp.view.question.ResponseView',{
         tooltip:'Details of selected Question',
         handler:'onDetailsBtnClick'
     },{
+=======
+    tbar:[
+    //     {
+    //     text:'Add Question',
+    //     tooltip:'Add new Question',
+    //     handler:'onAddBtnClick'
+    // },{
+    //     text:'Details',
+    //     tooltip:'Details of selected Question',
+    //     handler:'OnDetailsBtnClick'
+    // },
+    {
+>>>>>>> 213c97509cf27eae8e493321102d5567c2b8e2c0
         text:'Refresh',
         tooltip:'Refresh Page',
         handler:'onRefreshBtnCLick'
@@ -93,6 +157,12 @@ Ext.define('SurveyApp.view.question.ResponseView',{
         text:'Remove',
         tooltip:'Remove Question',
         handler:'onRemoveBtnClick'
+<<<<<<< HEAD
     }]
    
+=======
+    }],
+    selModel:'checkboxmodel'
+    
+>>>>>>> 213c97509cf27eae8e493321102d5567c2b8e2c0
 })

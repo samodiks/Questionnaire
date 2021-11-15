@@ -10,7 +10,6 @@
   ],
   "responses": [
     {
-<<<<<<< HEAD
       "yourself": "gggggggggg​",
       "dateOfBirth": "04-11-2003",
       "age": "18",
@@ -42,8 +41,6 @@
       "id": 3
     },
     {
-=======
->>>>>>> 213c97509cf27eae8e493321102d5567c2b8e2c0
       "yourself": "rrrrrrrrrrrrrrrrrrrrrrr​",
       "dateOfBirth": "04-11-2003",
       "age": "18",
@@ -88,7 +85,6 @@
       "id": 5
     },
     {
-<<<<<<< HEAD
       "yourself": "zsdgsdgshdkhhak​",
       "dateOfBirth": "02-11-2003",
       "age": "18",
@@ -115,25 +111,6 @@
       ],
       "ide": "",
       "level": "Expert",
-=======
-      "yourself": "rrrrrrrrrrrrrrrrrrrr​",
-      "dateOfBirth": "03-11-2003",
-      "age": "18",
-      "contract": "Yes",
-      "differentOpportunity": "yyyyyyyyyyyy​",
-      "onedisc": "D",
-      "twodisc": "I",
-      "threedisc": "S",
-      "fourdisc": "S",
-      "fivedisc": "S",
-      "startProgramming": "10-11-2021",
-      "versionControl": "None",
-      "keepProjects": "laptop",
-      "versionurl": "",
-      "languages": "",
-      "ide": "",
-      "level": "Beginner",
->>>>>>> 213c97509cf27eae8e493321102d5567c2b8e2c0
       "id": 6
     }
   ]
